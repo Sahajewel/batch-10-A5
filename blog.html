@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- lexend google font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- tailwindcss cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                black: '#111111',
+                white: '#FFFFFF',
+                green: '#B4F461',
+                gray: '#1111114D',
+                deepWhite: '#F9F7F3'
+              },
+              fontFamily: {
+                lexend: 'Lexend',
+              },
+              fontSize: {
+                20: '20px',
+                16: '16px'
+              },
+              fontWeight: {
+                700: '700',
+                600: '600',
+                500: '500',
+                300: '300'
+              }
+            }
+          }
+        }
+      </script>
+
+</head>
+<body class="font-lexend bg-white">
+    <header>
+       <section class="bg-deepWhite py-6">
+        <nav class="flex items-center justify-between w-10/12 mx-auto">
+            <div> <button  class="bg-green py-3 px-8 text-black font-600 rounded-lg text-20">Blog</button></div>
+            <div class="flex justify-center items-center">
+                <div><img src="./assets/logo.png" alt="This is a image which is donate"></div>
+                <div class="text-20 font-600 text-black ml-3">Donate Bangladesh</div>
+            </div>
+            <div class="flex justify-center items-center"> 
+                <div><img src="./assets/coin.png" alt="This is coin image                             "></div>
+                <div class="font-500 text-20 text-black ml-2"><span>5500</span><span class="ml-2">BDT</span></div>
+            </div>
+        </nav>
+       </section>
+       <div class="flex justify-center mt-12 mb-6">
+        <div> <button  class="bg-[#11111] border border-gray py-3 px-8 text-black font-500 rounded-lg text-20">Donation</button></div>
+        <div class="ml-5"> <button  class="bg-green py-3 px-8 text-black font-600 rounded-lg text-20">History</button></div>
+       </div>
+    </header>
+    <main></main>
+    <footer class="bg-deepWhite w-full h-40"></footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
