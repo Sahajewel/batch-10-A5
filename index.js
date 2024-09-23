@@ -1,11 +1,23 @@
 
 const noakhaliBtn = document.getElementById("noakhali-btn");
 noakhaliBtn.addEventListener("click", function(){
+
     const noakhaliValue = inputValue("noakhali-input");
+    const p = document.createElement("p");
+    p.innerText = `
+         ${noakhaliValue} taka Donate for Flood at Noakhali, Bangladesh
+         ${new Date()}
+    `
+    const div = document.getElementById("div-history");
+    div.appendChild(p);
+    p.classList.add("border","rounded-xl","p-8","text-xl", "mb-5",)
+   
+
     if(isNaN(noakhaliValue) || noakhaliValue <= 0){
         alert('invalid number')
+
         return
-    }
+}
    let noakhaliDonation = document.getElementById("noakhali-donation");
    const noakhaliDonationNumber = parseFloat(noakhaliDonation.innerText );
    let balance = noakhaliDonationNumber + noakhaliValue;
@@ -15,14 +27,23 @@ noakhaliBtn.addEventListener("click", function(){
    let amount = parseFloat(totalAmount.innerText)
    let getAmount = amount - noakhaliValue;
    totalAmount.innerText = getAmount;
-
- 
-    
+  
 })
 
 const feniBtn = document.getElementById("feni-btn");
 feniBtn.addEventListener("click", function(){
     const feniValue = inputValue("feni-input");
+  
+    const p = document.createElement("p");
+    p.innerText = `
+         ${feniValue} Donate for Flood Relief in Feni, Bangladesh
+         ${new Date()}
+    `
+    const div = document.getElementById("div-history");
+    div.appendChild(p);
+    p.classList.add("border","rounded-xl","p-8","text-xl", "mb-5")
+
+
     if(isNaN(feniValue) || feniValue <= 0){
         alert('invalid number')
         return
@@ -44,6 +65,16 @@ feniBtn.addEventListener("click", function(){
 const quotaBtn = document.getElementById("quota-btn");
 quotaBtn.addEventListener("click", function(){
     const quotaValue = inputValue("quota-input");
+
+    const p = document.createElement("p");
+    p.innerText = `
+         ${quotaValue} Aid for Injured in the Quota Movement
+         ${new Date()}
+    `
+    const div = document.getElementById("div-history");
+    div.appendChild(p);
+    p.classList.add("border","rounded-xl","p-8","text-xl", "mb-5")
+
     if(isNaN(quotaValue) || quotaValue <= 0){
         alert('invalid number')
         return
@@ -78,7 +109,11 @@ const historyBtn = document.getElementById("history-btn");
 historyBtn.addEventListener("click", function(){
     donationBtn.classList.remove("bg-green", "py-3", "px-8", "text-black", "font-600", "rounded-lg", "text-20");
     historyBtn.classList.add("bg-green", "py-3", "px-8", "text-black", "font-600", "rounded-lg", "text-20");
-    donationBtn.classList.add("bg-[#11111]", "border", "border-gray","py-3", "px-8", "text-black", "font-500", "rounded-lg", "text-20")
+    donationBtn.classList.add("bg-[#11111]", "border", "border-gray","py-3", "px-8", "text-black", "font-500", "rounded-lg", "text-20");
+    document.getElementById("main-section").classList.add("hidden");
+    document.getElementById("history-saction").classList.remove("hidden");
+    document.getElementById("footer").classList.add("hidden")
+  
 })
 
 
@@ -87,7 +122,10 @@ const donationBtn = document.getElementById("donattion-btn");
 donationBtn.addEventListener("click", function(){
     donationBtn.classList.add("bg-green", "py-3", "px-8", "text-black", "font-600", "rounded-lg", "text-20");
     historyBtn.classList.remove("bg-green", "py-3", "px-8", "text-black", "font-600", "rounded-lg", "text-20");
-    historyBtn.classList.add("bg-[#11111]", "border", "border-gray","py-3", "px-8", "text-black", "font-500", "rounded-lg", "text-20")
+    historyBtn.classList.add("bg-[#11111]", "border", "border-gray","py-3", "px-8", "text-black", "font-500", "rounded-lg", "text-20");
+    document.getElementById("main-section").classList.remove("hidden");
+    document.getElementById("history-saction").classList.add("hidden");
+    document.getElementById("footer").classList.remove("hidden")
 })
 
 
