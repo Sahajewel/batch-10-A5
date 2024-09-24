@@ -8,14 +8,18 @@ noakhaliBtn.addEventListener("click", function(){
          ${noakhaliValue} taka Donate for Flood at Noakhali, Bangladesh
          ${new Date()}
     `
-    const div = document.getElementById("div-history");
+    const div = allDonationMoney("div-history");
     div.appendChild(p);
     p.classList.add("border","rounded-xl","p-8","text-xl", "mb-5",)
-   
 
-    if(isNaN(noakhaliValue) || noakhaliValue <= 0){
+    if(isNaN(noakhaliValue) || noakhaliValue <= 0 ){
+        
+        div.removeChild(p);
+
         alert('invalid number')
-
+        const model =  document.getElementById("my_modal_1");
+        model.close()
+       
         return
 }
    let noakhaliDonation = document.getElementById("noakhali-donation");
@@ -24,6 +28,14 @@ noakhaliBtn.addEventListener("click", function(){
    noakhaliDonation.innerText = balance;
 
    let totalAmount = document.getElementById("total-money");
+   if(totalAmount.innerText < noakhaliValue ){
+    div.removeChild(p)
+        alert("not sufficient balance");
+        const model =  document.getElementById("my_modal_1");
+        model.close()
+        return
+   }
+  
    let amount = parseFloat(totalAmount.innerText)
    let getAmount = amount - noakhaliValue;
    totalAmount.innerText = getAmount;
@@ -39,15 +51,20 @@ feniBtn.addEventListener("click", function(){
          ${feniValue} Donate for Flood Relief in Feni, Bangladesh
          ${new Date()}
     `
-    const div = document.getElementById("div-history");
+    const div = allDonationMoney("div-history");
     div.appendChild(p);
     p.classList.add("border","rounded-xl","p-8","text-xl", "mb-5")
 
-
-    if(isNaN(feniValue) || feniValue <= 0){
+    if(isNaN(feniValue) || feniValue <= 0 ){
+        div.removeChild(p)
         alert('invalid number')
-        return
-    }
+        const model =  document.getElementById("my_modal_2");
+        model.close()
+         return
+ }
+
+
+    
 
     let feniDonation = document.getElementById("feni-donation");
     const feniDonationNumber = parseFloat(feniDonation.innerText );
@@ -55,6 +72,15 @@ feniBtn.addEventListener("click", function(){
     feniDonation.innerText = balance;
  
     let totalAmount = document.getElementById("total-money");
+    if(totalAmount.innerText < feniValue ){
+        div.removeChild(p)
+        alert("not sufficient balance")
+        const model =  document.getElementById("my_modal_2");
+        model.close()
+         return
+    }
+
+    
     let amount = parseFloat(totalAmount.innerText)
     let getAmount = amount - feniValue;
     totalAmount.innerText = getAmount;
@@ -71,14 +97,21 @@ quotaBtn.addEventListener("click", function(){
          ${quotaValue} Aid for Injured in the Quota Movement
          ${new Date()}
     `
-    const div = document.getElementById("div-history");
+    const div = allDonationMoney("div-history");
     div.appendChild(p);
-    p.classList.add("border","rounded-xl","p-8", "text-4xl", "mb-5")
+    
+    p.classList.add("border","rounded-xl","p-8","text-xl", "mb-5")
 
-    if(isNaN(quotaValue) || quotaValue <= 0){
+    if(isNaN(quotaValue) || quotaValue <= 0 ){
+        div.removeChild(p)
         alert('invalid number')
-        return
-    }
+        const model =  document.getElementById("my_modal_3");
+        model.close()
+         return
+ }
+    
+
+    
 
     let quotaDonation = document.getElementById("quota-donation");
     const quotaDonationNumber = parseFloat(quotaDonation.innerText );
@@ -86,6 +119,14 @@ quotaBtn.addEventListener("click", function(){
     quotaDonation.innerText = balance;
  
     let totalAmount = document.getElementById("total-money");
+    if(totalAmount.innerText < quotaValue ){
+        div.removeChild(p)
+        alert("not sufficient balance")
+        const model =  document.getElementById("my_modal_3");
+        model.close()
+         return
+    }
+    
     let amount = parseFloat(totalAmount.innerText)
     let getAmount = amount - quotaValue;
     totalAmount.innerText = getAmount;
@@ -111,7 +152,7 @@ historyBtn.addEventListener("click", function(){
     historyBtn.classList.add("bg-green", "py-3", "px-8", "text-black", "font-600", "rounded-lg", "text-20");
     donationBtn.classList.add("bg-[#11111]", "border", "border-gray","py-3", "px-8", "text-black", "font-500", "rounded-lg", "text-20");
     document.getElementById("main-section").classList.add("hidden");
-    document.getElementById("history-saction").classList.remove("hidden");
+    document.getElementById("div-history").classList.remove("hidden");
     document.getElementById("footer").classList.add("hidden")
   
 })
@@ -124,7 +165,7 @@ donationBtn.addEventListener("click", function(){
     historyBtn.classList.remove("bg-green", "py-3", "px-8", "text-black", "font-600", "rounded-lg", "text-20");
     historyBtn.classList.add("bg-[#11111]", "border", "border-gray","py-3", "px-8", "text-black", "font-500", "rounded-lg", "text-20");
     document.getElementById("main-section").classList.remove("hidden");
-    document.getElementById("history-saction").classList.add("hidden");
+    document.getElementById("div-history").classList.add("hidden");
     document.getElementById("footer").classList.remove("hidden")
 })
 
