@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <!-- daisyUI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- tailwindcss cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -37,6 +40,14 @@
                 500: '500',
                 300: '300'
               }
+            },
+            screens: {
+              xs: '460px',
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1280px',
+              '2xl': '1536px'
             }
           }
         }
@@ -55,8 +66,11 @@
                 <div class="text-20 font-600 text-black ml-3">Donate Bangladesh</div>
             </div>
             <div class="flex justify-center items-center"> 
-                <div><img src="./assets/coin.png" alt="This is coin image"></div>
+                <div><img  src="./assets/coin.png" alt="This is coin image"></div>
                 <div class="font-500 text-20 text-black ml-2"><span id="total-money">5500</span><span class="ml-2">BDT</span></div>
+            </div>
+            <div>
+              <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
        </section>
@@ -67,11 +81,11 @@
     </header>
     <main>
         <section id="main-section">
-            <div class=" w-3/4 mx-auto grid grid-cols-2 gap-10 border border-gray rounded-2xl p-10 mb-10">
-                <div class="col-span-1">
-                    <img class="w-full" src="./assets/noakhali.png" alt="This is a noakhali image">
+            <div class=" w-3/4 mx-auto grid  grid-cols-2 gap-10 border border-gray rounded-2xl p-10 mb-10">
+                <div class="xs:col-span-full md:col-span-full lg:col-span-1">
+                    <img class="w-full h-full object-cover" src="./assets/noakhali.png" alt="This is a noakhali image">
                 </div>
-                <div class="col-span-1">
+                <div class="xs:col-span-full md:col-span-full lg:col-span-1">
                   
                         <div class="mb-5">
                             <button class="flex items-center justify-center bg-deepWhite py-3 px-8 text-black font-500 rounded-lg text-20"><img src="./assets/coin.png" alt="coin image"><span id="noakhali-donation" class="ml-2">0</span><span class="ml-2">BDT</span></button>
@@ -108,11 +122,11 @@
                    
                 </div>
             </div>
-            <div class=" w-10/12 mx-auto grid grid-cols-2 gap-10 border border-gray rounded-2xl p-10 mb-10">
-                <div class="col-span-1">
-                    <img class="w-full" src="./assets/feni.png" alt="This is a feni image">
+            <div class=" w-3/4 mx-auto grid grid-cols-2 gap-10 border border-gray rounded-2xl p-10 mb-10">
+                <div class="xs:col-span-full md:col-span-full lg:col-span-1">
+                    <img class="w-full h-full object-cover" src="./assets/feni.png" alt="This is a feni image">
                 </div>
-                <div class="col-span-1">
+                <div class="xs:col-span-full md:col-span-full lg:col-span-1">
                   
                         <div class="mb-5">
                             <button class="flex items-center justify-center bg-deepWhite py-3 px-8 text-black font-500 rounded-lg text-20"><img src="./assets/coin.png" alt="coin image"><span id="feni-donation" class="ml-2">600</span><span class="ml-2">BDT</span></button>
@@ -147,11 +161,11 @@
                    
                 </div>
             </div>
-            <div class=" w-10/12 mx-auto grid grid-cols-2 gap-10 border border-gray rounded-2xl p-10 mb-16">
-                <div class="col-span-1">
-                    <img class="w-full" src="./assets/quota-protest.png" alt="This is a feni image">
+            <div class=" w-3/4 mx-auto grid grid-cols-2 gap-10 border border-gray rounded-2xl p-10 mb-16">
+                <div class="xs:col-span-full md:col-span-full lg:col-span-1">
+                    <img class="w-full h-full object-cover" src="./assets/quota-protest.png" alt="This is a feni image">
                 </div>
-                <div class="col-span-1">
+                <div class="xs:col-span-full md:col-span-full lg:col-span-1">
                   
                         <div class="mb-5">
                             <button class="flex items-center justify-center bg-deepWhite py-3 px-8 text-black font-500 rounded-lg text-20"><img src="./assets/coin.png" alt="coin image"><span id="quota-donation" class="ml-2">2400</span><span class="ml-2">BDT</span></button>
