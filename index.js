@@ -28,17 +28,21 @@ noakhaliBtn.addEventListener("click", function(){
    noakhaliDonation.innerText = balance;
 
    let totalAmount = document.getElementById("total-money");
-   if(totalAmount.innerText < noakhaliValue ){
+   if(totalAmount.innerText < noakhaliValue){
     div.removeChild(p)
         alert("not sufficient balance");
         const model =  document.getElementById("my_modal_1");
         model.close()
-        return
+        return 
    }
+  
   
    let amount = parseFloat(totalAmount.innerText)
    let getAmount = amount - noakhaliValue;
    totalAmount.innerText = getAmount;
+   
+
+   
   
 })
 
