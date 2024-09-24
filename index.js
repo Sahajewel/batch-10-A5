@@ -73,7 +73,7 @@ quotaBtn.addEventListener("click", function(){
     `
     const div = document.getElementById("div-history");
     div.appendChild(p);
-    p.classList.add("border","rounded-xl","p-8","text-xl", "mb-5")
+    p.classList.add("border","rounded-xl","p-8", "text-4xl", "mb-5")
 
     if(isNaN(quotaValue) || quotaValue <= 0){
         alert('invalid number')
