@@ -1,6 +1,6 @@
 # Donate Bangladesh - Charity & Donation Platform
 
-A responsive donation and charity website built with HTML, CSS, and JavaScript, created in 2022 to support humanitarian causes in Bangladesh.
+A responsive donation and charity website built with HTML, CSS, and JavaScript, created in 2024 to support humanitarian causes in Bangladesh.
 
 ## 📋 Description
 
